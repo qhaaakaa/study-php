@@ -9,18 +9,14 @@
 
 
 // 注册自加载
-spl_autoload_register('autoload');
-
-function autoload($class)
-{
-    require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//' . str_replace('\\', '/', $class) . '.php';
-}
+include "../autoload.php";
 
 /************************************* 过滤器模式 *************************************/
 
 /*
  * 个人理解：满足某种条件的时候通过 不满足的时候过滤掉
  */
+
 use filter\SportsPerson;
 use filter\FilterSportType;
 use filter\FilterGender;

@@ -9,18 +9,14 @@
 
 
 // 注册自加载
-spl_autoload_register('autoload');
-
-function autoload($class)
-{
-    require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//' . str_replace('\\', '/', $class) . '.php';
-}
+include "../autoload.php";
 
 /************************************* 组合模式 ********************/
 
 /*
  * 个人理解：是用于把一组相似的对象当作一个单一的对象,组合模式依据树形结构来组合对象
  */
+
 use composite\Folder;
 use composite\File;
 

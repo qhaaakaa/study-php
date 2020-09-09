@@ -10,12 +10,7 @@
 
 
 // 注册自加载
-spl_autoload_register('autoload');
-
-function autoload($class)
-{
-    require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//' . str_replace('\\', '/', $class) . '.php';
-}
+include "../autoload.php";
 
 /************************************* 装饰器模式 *************************************/
 
@@ -23,6 +18,7 @@ function autoload($class)
  * 个人理解 ：允许向一个现有的对象添加新的功能，同时又不改变其结构。
  * 它是作为现有的类的一个包装。
  */
+
 use decorator\DecoratorBrand;
 use decorator\ShoesSport;
 use decorator\ShoesSkateboard;

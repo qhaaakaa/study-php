@@ -12,18 +12,14 @@
 
 
 // 注册自加载
-spl_autoload_register('autoload');
-
-function autoload($class)
-{
-    require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//' . str_replace('\\', '/', $class) . '.php';
-}
+include "../autoload.php";
 
 /************************************* 代理器模式 *************************************/
 
 /*
  * 个人理解：代理模式个人感觉像是加了一层中间件一样作用
  */
+
 use proxy\Proxy;
 use proxy\ShoesSport;
 

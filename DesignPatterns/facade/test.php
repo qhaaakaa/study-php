@@ -9,18 +9,14 @@
 
 
 // 注册自加载
-spl_autoload_register('autoload');
-
-function autoload($class)
-{
-    require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//' . str_replace('\\', '/', $class) . '.php';
-}
+include "../autoload.php";
 
 /************************************* 外观模式 *************************************/
 
 /*
  * 个人理解 ： 隐藏具体类的功能实现 只暴露出最简单接口
  */
+
 use facade\AnimalMaker;
 
 // 初始化外观类
