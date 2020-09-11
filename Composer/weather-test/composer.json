@@ -1,0 +1,18 @@
+{
+    "name": "x260/weather-test",
+    "authors": [
+        {
+            "name": "qhaaakaa",
+            "email": "1004919086@qq.com"
+        }
+    ],
+    "require": {
+        "overtrue/weather": "dev-master"
+    },
+    "repositories": {
+        "weather": {
+            "type": "path",
+            "url": "../weather"
+        }
+    }
+}
