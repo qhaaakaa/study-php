@@ -115,11 +115,10 @@ $class2->add(6);
 $class2->add(4);
 //$class->reverse();
 //$class2->getAll();
-
+//数据结构 求和
 function addTwoNumbers($l1, $l2)
 {
     $obj = null;
-
     $additional = 0;
     while ($l1 || $l2 || $additional) {
         $value = $l1->data + $l2->data + $additional;
@@ -129,7 +128,6 @@ function addTwoNumbers($l1, $l2)
             $value -= 10;
             $additional = 1;
         }
-
         $tmp_obj = new Node($value);
 
         if (is_null($obj)) {
@@ -141,7 +139,6 @@ function addTwoNumbers($l1, $l2)
 
         $l1 = $l1->next;
         $l2 = $l2->next;
-
     }
     return $obj;
 }
